@@ -5,11 +5,11 @@
     grid-template-rows: 60px 100px 50% auto 40px;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    background-color: rgb(26, 24, 24);
+    background-color: rgb(231, 231, 221);
 
     grid-template-areas: 
         "header header header header header"
-        ". sidebar title title ."
+        ". logo title title ."
         ". sidebar main main ."
         ". . . . ."
         "footer footer footer footer footer"
@@ -22,7 +22,7 @@
 
 .item-sidebar{
     grid-area: sidebar;
-    background-color: deeppink;
+
 }
 
 .item-title{
@@ -38,4 +38,9 @@
 .item-footer{
     grid-area: footer;
     background-color: indigo;
+}
+
+.item-logo{
+    grid-area: logo;
+    background-color: salmon;
 }

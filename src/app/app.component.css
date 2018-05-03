@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto 200px 600px 300px auto;
+    grid-template-rows: 60px 100px 50% auto 60px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    background-color: rgb(26, 24, 24);
+}
+
+:host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+
+.a{
+    background-color: greenyellow;
+}
+
+.b{
+    background-color: aqua;
+}
+
+.c{
+    background-color: deepskyblue;
+}
+
+.d{
+    background-color: blue;
+}
+
+.e{
+    background-color: blueviolet;
+}
+
+.f{
+    background-color: brown;
+}
+
+.g{
+    background-color: chartreuse;
+}
+

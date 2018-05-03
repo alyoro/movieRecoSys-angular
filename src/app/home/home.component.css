@@ -15,15 +15,6 @@
         "footer footer footer footer footer"
 }
 
-:host {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-  }
-
-
 .item-header{
     grid-area: header;
     background-color: greenyellow;
@@ -48,6 +39,3 @@
     grid-area: footer;
     background-color: indigo;
 }
-
-
-

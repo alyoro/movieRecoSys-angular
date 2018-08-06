@@ -11,6 +11,7 @@ import { LogoComponent } from './logo/logo.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { TopListComponent } from './top-list/top-list.component';
+import { RecomendationComponent } from './recomendation/recomendation.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TopListComponent } from './top-list/top-list.component';
     LogoComponent,
     SearchComponent,
     LoginComponent,
-    TopListComponent
+    TopListComponent,
+    RecomendationComponent
   ],
   imports: [
     BrowserModule,

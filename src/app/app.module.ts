@@ -11,8 +11,8 @@ import { LogoComponent } from './logo/logo.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { TopListComponent } from './top-list/top-list.component';
-import { RecomendationComponent } from './recomendation/recomendation.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { RecoComponent } from './reco/reco.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { AppRoutingModule } from './/app-routing.module';
     SearchComponent,
     LoginComponent,
     TopListComponent,
-    RecomendationComponent
+    RecoComponent
   ],
   imports: [
     BrowserModule,

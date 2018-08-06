@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { TopListComponent } from './top-list/top-list.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RecomendationComponent } from './recomendation/recomendation.component'
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

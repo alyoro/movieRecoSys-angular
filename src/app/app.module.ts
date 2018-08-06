@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LogoComponent } from './logo/logo.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LogoComponent } from './logo/logo.component';
     AppComponent,
     HomeComponent,
     SidebarComponent,
-    LogoComponent
+    LogoComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

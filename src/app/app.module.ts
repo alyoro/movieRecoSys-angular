@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { LogoComponent } from './logo/logo.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
+import { TopListComponent } from './top-list/top-list.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     SidebarComponent,
     LogoComponent,
     SearchComponent,
-    LoginComponent
+    LoginComponent,
+    TopListComponent
   ],
   imports: [
     BrowserModule,

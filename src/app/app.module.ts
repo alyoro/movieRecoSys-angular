@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { TopListComponent } from './top-list/top-list.component';
 import { RecoComponent } from './reco/reco.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MoviesComponent } from './movies/movies.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     SearchComponent,
     LoginComponent,
     TopListComponent,
-    RecoComponent
+    RecoComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

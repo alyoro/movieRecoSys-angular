@@ -14,6 +14,7 @@ import { TopListComponent } from './top-list/top-list.component';
 import { RecoComponent } from './reco/reco.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MoviesComponent } from './movies/movies.component';
     LoginComponent,
     TopListComponent,
     RecoComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

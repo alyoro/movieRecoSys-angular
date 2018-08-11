@@ -1,12 +1,5 @@
-
-<h2>Top Movies</h2>
-    <ul>
+    <ul style="list-style-type:none">
         <li *ngFor="let movie of movies">
-            <h2>{{movie.title}} Details</h2>
-            <div><span>id: </span>{{movie.id}}</div>
-            <div><span>title: </span>{{movie.title}}</div>
-            <div><span>director: </span>{{movie.director}}</div>
-            <div><span>type: </span>{{movie.type}}</div>
-            <div><span>year: </span>{{movie.year}}</div>
+            <app-movie-detail [movie] = "movie"></app-movie-detail>
         </li>
     </ul>

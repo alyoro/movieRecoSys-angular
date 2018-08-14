@@ -3,5 +3,6 @@ export class Movie{
     title: string;
     director: string;
     type: string;
-    year: number;
+    year: string;
+    avgScore: number;
 }

@@ -15,6 +15,7 @@ import { RecoComponent } from './reco/reco.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatGridListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

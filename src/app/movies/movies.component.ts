@@ -16,11 +16,11 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    
+    this.getMovies();
   }
 
   ngAfterViewInit(){
-    this.getMovies();
+    
   }
 
   getMovies(): void {

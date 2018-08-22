@@ -15,7 +15,10 @@ import { RecoComponent } from './reco/reco.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { JwtInterceptor } from './_helpers/jwt.interceptors';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
 
 
 @NgModule({
@@ -33,13 +36,17 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatGridListModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

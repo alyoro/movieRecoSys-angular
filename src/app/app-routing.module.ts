@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { RecoComponent } from './reco/reco.component';
 import { TopListComponent } from './top-list/top-list.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'search', component: SearchComponent},
   {path: 'reco', component: RecoComponent},
   {path: 'top', component: TopListComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

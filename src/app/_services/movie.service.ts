@@ -5,8 +5,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 
-import { Movie } from './movie';
-import { environment } from '../environments/environment';
+import { Movie } from '../movie';
+import { environment } from '../../environments/environment';
 
 
 

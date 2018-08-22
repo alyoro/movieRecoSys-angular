@@ -19,6 +19,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '../../node_modules/@angular
 import { ReactiveFormsModule } from '@angular/forms';
 import { JwtInterceptor } from './_helpers/jwt.interceptors';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { RegisterComponent } from './register/register.component';
+import { AlertService } from './_services/alert.service';
+import { AuthGuard } from './_guards/auth.guard';
+import { AuthenticationService } from './_services/authentication.service';
+import { UserService } from './_services/user.service';
+import { AlertComponent } from './_directives/alert.component';
 
 
 @NgModule({
@@ -32,7 +38,9 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     TopListComponent,
     RecoComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +52,11 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     HttpClientModule
   ],
   providers: [
+    AlertService,
+    AuthGuard,
+    AuthenticationService,
+    UserService,
+
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],

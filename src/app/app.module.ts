@@ -25,6 +25,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AlertComponent } from './_directives/alert.component';
     MoviesComponent,
     MovieDetailComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,

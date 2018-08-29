@@ -28,7 +28,16 @@ export class MovieService {
       catchError(this.handleError('getMovies', []))
     );
     
+    
   }
+
+  public searchMovie(title: string): Observable<Movie[]>{
+    return this.http.get<Movie[]>(this.actionUrl + 'search/title?title='+ title)
+    .pipe(
+      tap(movies => this.log('search Movie')),
+      catchError(this.handleError('searchMovie', []))
+    );
+}
   
 
   private handleError<T> (operation = 'operation', result?: T) {

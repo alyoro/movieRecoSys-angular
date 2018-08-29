@@ -6,13 +6,14 @@ import { RecoComponent } from './reco/reco.component';
 import { TopListComponent } from './top-list/top-list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'search', component: SearchComponent},
-  {path: 'reco', component: RecoComponent},
+  {path: 'reco', component: RecoComponent, canActivate: [AuthGuard]},
   {path: 'top', component: TopListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent}

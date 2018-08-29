@@ -19,10 +19,6 @@ export class MoviesComponent implements OnInit {
     this.getMovies();
   }
 
-  ngAfterViewInit(){
-    
-  }
-
   getMovies(): void {
     this.movieService.getMovies()
     .subscribe(movies => this.movies = movies);

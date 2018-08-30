@@ -41,7 +41,7 @@ body {
 
 .item-main{
   grid-area: main;
-  background-color: green;
+  /* background-color: lightgrey; */
 }
 
 .item-footer{

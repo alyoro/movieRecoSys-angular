@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatInputModule, MatAutocompleteModule, MatCardModule, MatTableModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { JwtInterceptor } from './_helpers/jwt.interceptors';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { RegisterComponent } from './register/register.component';
@@ -50,8 +50,13 @@ import { SearchFormComponent } from './search-form/search-form.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatGridListModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    MatTableModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     AlertService,

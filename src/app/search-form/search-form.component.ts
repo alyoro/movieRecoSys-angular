@@ -14,6 +14,8 @@ export class SearchFormComponent implements OnInit {
   submitted = false;
   movies: Movie[];
 
+  displayedColumns: string[] = ['title', 'director', 'year', 'type', 'avgScore'];
+
   constructor(
     private movieService: MovieService,
     private formBuilder: FormBuilder) { }

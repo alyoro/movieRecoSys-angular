@@ -37,8 +37,15 @@ export class MovieService {
       tap(movies => this.log('search Movie')),
       catchError(this.handleError('searchMovie', []))
     );
-}
-  
+  }
+
+  public getRandomMovies(): Observable<Movie[]>{
+    return this.http.get<Movie[]>(this.actionUrl + 'random')
+    .pipe(
+      tap(movies => this.log('random Movies')),
+      catchError(this.handleError('getRandomMovies', []))
+    );
+  }  
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

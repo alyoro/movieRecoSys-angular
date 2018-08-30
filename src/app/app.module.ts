@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatGridListModule, MatInputModule, MatAutocompleteModule, MatCardModule, MatTableModule, MatPaginatorModule, MatCardTitle, MatSliderModule} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatInputModule, MatAutocompleteModule, MatCardModule, MatTableModule, MatPaginatorModule, MatCardTitle, MatSliderModule, MatSelectModule, MatOptionModule, MatTooltipModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { MoviesrecoComponent } from './moviesreco/moviesreco.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { SearchFormComponent } from './search-form/search-form.component';
     MovieDetailComponent,
     RegisterComponent,
     AlertComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    MoviesrecoComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,9 @@ import { SearchFormComponent } from './search-form/search-form.component';
     MatTableModule,
     MatPaginatorModule,
     MatSliderModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatTooltipModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

@@ -19,10 +19,12 @@ const httpOptionsPost = {
 export class MovieService {
 
   private actionUrl: string;
+  private actionApiUrl: string;
 
   constructor(
     private http: HttpClient) {
       this.actionUrl = environment.apiUrl + 'movies/';
+      this.actionApiUrl = environment.apiUrl + 'api/';
     }
     
 
@@ -54,10 +56,42 @@ export class MovieService {
 
   public evaluateMovie(score: number, movieId: number): Observable<EvaluatePost>{
     let evaluate = new EvaluatePost(movieId, score);
-    return this.http.post<EvaluatePost>('http://localhost:8090/api/movies/evaluate' , evaluate, httpOptionsPost)
+    return this.http.post<EvaluatePost>(this.actionApiUrl+'movies/evaluate' , evaluate, httpOptionsPost)
     .pipe(
       catchError(this.handleError('evaluateMovie', evaluate))
     );
+  }
+
+  public getWatchedMovies(): Observable<Movie[]>{
+    return this.http.get<Movie[]>(this.actionApiUrl+'movies/watched')
+    .pipe(
+      tap(movies => this.log('watched Movies')),
+      catchError(this.handleError('getWatchedMovies', []))
+    );
+  }
+
+  public getRecommendationMovies(movie: Movie, recoSelect: string): Observable<Movie[]>{
+    if(recoSelect=="director"){
+    return this.http.get<Movie[]>(this.actionApiUrl+'movies/reco?reco='+recoSelect+'&data='+movie.director)
+    .pipe(
+      tap(movies => this.log('get Recommendation Movies')),
+      catchError(this.handleError('getRecommendationMovies', []))
+    );
+    }
+    if(recoSelect=="year"){
+      return this.http.get<Movie[]>(this.actionApiUrl+'movies/reco?reco='+recoSelect+'&data='+movie.year)
+    .pipe(
+      tap(movies => this.log('get Recommendation Movies')),
+      catchError(this.handleError('getRecommendationMovies', []))
+    );
+    }
+    if(recoSelect=="type"){
+      return this.http.get<Movie[]>(this.actionApiUrl+'movies/reco?reco='+recoSelect+'&data='+movie.type)
+    .pipe(
+      tap(movies => this.log('get Recommendation Movies')),
+      catchError(this.handleError('getRecommendationMovies', []))
+    );
+    }
   }
 
   private handleError<T> (operation = 'operation', result?: T) { 

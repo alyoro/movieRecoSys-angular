@@ -1,7 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 
 import {Movie} from '../movie';
-import {MOVIES} from '../mock-movies';
 import { MovieService } from '../_services/movie.service';
 
 @Component({

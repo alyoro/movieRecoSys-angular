@@ -18,9 +18,8 @@
     </ng-container>
     <ng-container matColumnDef="avgScore">
         <th mat-header-cell *matHeaderCellDef> Average Score </th>
-        <td mat-cell *matCellDef="let movie"> {{movie.avgScore}} </td>
+        <td mat-cell *matCellDef="let movie"> {{movie.avgScore | number:'.1-2'}} </td>
     </ng-container>
-
     <ng-container matColumnDef="yourScore">
         <th mat-header-cell *matHeaderCellDef> Your Score </th>
         <td mat-cell *matCellDef="let movie">

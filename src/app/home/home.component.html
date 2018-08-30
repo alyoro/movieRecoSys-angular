@@ -13,11 +13,7 @@
       <h1> HOME SCREEN</h1>
 
       <h1>Random Movies</h1>
-      <ul style="list-style-type:none">
-        <li *ngFor="let movie of movies">
-            <app-movie-detail [movie] = "movie"></app-movie-detail>
-        </li>
-    </ul>
+      <app-movies [movies] = "movies"></app-movies>
     </div>
     <div class="item-footer">footer</div>
   </div>

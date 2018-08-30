@@ -9,19 +9,8 @@ import { Movie } from '../movie';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private movieService: MovieService) { }
-
-  movies: Movie[];
+  constructor() { }
 
   ngOnInit() {
-    // this.movieService.searchMovie("testTitle")
-    // .subscribe(movies => this.movies = movies);
   }
-
-  // onSubmit(){
-  //   this.movieService.searchMovie("testTit")
-  //   .subscribe(movies => this.movies = movies);
-  // }
-
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 import {Movie} from '../movie';
 import {MOVIES} from '../mock-movies';
@@ -11,17 +11,13 @@ import { MovieService } from '../_services/movie.service';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: Movie[];
+  @Input() movies: Movie[];
+  displayedColumns: string[] = ['title', 'director', 'year', 'type', 'avgScore'];
 
-  constructor(private movieService: MovieService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.getMovies();
+  ngOnInit() {  
   }
 
-  getMovies(): void {
-    this.movieService.getMovies()
-    .subscribe(movies => this.movies = movies);
-  }
 
 }

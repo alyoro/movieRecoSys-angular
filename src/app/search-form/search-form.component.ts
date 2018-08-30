@@ -14,8 +14,6 @@ export class SearchFormComponent implements OnInit {
   submitted = false;
   movies: Movie[];
 
-  displayedColumns: string[] = ['title', 'director', 'year', 'type', 'avgScore'];
-
   constructor(
     private movieService: MovieService,
     private formBuilder: FormBuilder) { }
@@ -34,12 +32,9 @@ export class SearchFormComponent implements OnInit {
     if (this.searchForm.invalid) {
       return;
     }
-
     this.movieService.searchMovie(this.f.formMovieTitle.value)
     .subscribe(
       movies => {this.movies = movies;}
     )
-    
   }
-
 }

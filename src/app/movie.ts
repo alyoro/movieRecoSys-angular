@@ -5,4 +5,5 @@ export class Movie{
     type: string;
     year: string;
     avgScore: number;
+    yourScore: number;
 }

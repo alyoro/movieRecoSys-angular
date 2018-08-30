@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatGridListModule, MatInputModule, MatAutocompleteModule, MatCardModule, MatTableModule, MatPaginatorModule, MatCardTitle} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatInputModule, MatAutocompleteModule, MatCardModule, MatTableModule, MatPaginatorModule, MatCardTitle, MatSliderModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -55,6 +55,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSliderModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

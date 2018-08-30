@@ -13,11 +13,37 @@ export class MoviesComponent implements OnInit {
 
   @Input() movies: Movie[];
   displayedColumns: string[] = ['title', 'director', 'year', 'type', 'avgScore'];
+  evaluation: any;
 
-  constructor() { }
+
+  constructor(private movieServie: MovieService) { }
 
   ngOnInit() {  
+    this.addVisualizationOfYourScore();
   }
 
+  checkIfUserIsLogged(){
+    if(localStorage.getItem('currentUser')){
+      return true;
+    }
+      else return false;
+  }
+
+  onChange(change,movieId) {
+    this.movieServie.evaluateMovie(change.value, movieId)
+    .subscribe(evalulation => this.evaluation=evalulation);
+  }
+
+
+  addVisualizationOfYourScore(){
+    if(this.checkIfUserIsLogged()){
+      try{
+         this.displayedColumns.push('yourScore');
+      }
+      catch(Error){
+        return null;
+      }
+    }
+  }
 
 }

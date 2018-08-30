@@ -11,7 +11,8 @@ import { JwtToken } from '../_models/jwtToken';
 export class SidebarComponent implements OnInit {
 
   private userName: JwtToken;
-  private usernameMessage: string;
+  usernameMessage: string;
+  loginButton: string;
 
   constructor() { }
   
@@ -24,11 +25,15 @@ export class SidebarComponent implements OnInit {
     if(localStorage.getItem('currentUser')){
       try{
          this.userName = jwt_decode(localStorage.getItem('currentUser'));
-         this.usernameMessage = "Welcome: "+this.userName.sub+"!";
+         this.usernameMessage = "Logged as: "+this.userName.sub+"!";
+         this.loginButton = "Logout";
       }
       catch(Error){
         return null;
       }
+    }
+    else{
+      this.loginButton = "Login";
     }
   }
 

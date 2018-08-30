@@ -13,8 +13,8 @@ body {
   height: 100vh;
   grid-template-columns: auto 200px 600px 300px auto;
   grid-template-rows: 60px 100px auto auto 40px;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   
 
   grid-template-areas: 
@@ -36,7 +36,10 @@ body {
 
 .item-title{
   grid-area: title;
-  background-color: firebrick;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3F51B5;
+  color: darkorange;
 }
 
 .item-main{

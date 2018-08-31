@@ -27,7 +27,6 @@ body {
 
 .item-header{
   grid-area: header;
-  background-color: greenyellow;
 }
 
 .item-sidebar{
@@ -49,7 +48,7 @@ body {
 
 .item-footer{
   grid-area: footer;
-  background-color: indigo;
+  text-align: center;
 }
 
 .item-logo{

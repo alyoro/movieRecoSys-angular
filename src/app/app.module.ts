@@ -14,7 +14,6 @@ import { TopListComponent } from './top-list/top-list.component';
 import { RecoComponent } from './reco/reco.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MoviesComponent } from './movies/movies.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { JwtInterceptor } from './_helpers/jwt.interceptors';
@@ -42,7 +41,6 @@ import { AddingComponent } from './adding/adding.component';
     TopListComponent,
     RecoComponent,
     MoviesComponent,
-    MovieDetailComponent,
     RegisterComponent,
     AlertComponent,
     SearchFormComponent,

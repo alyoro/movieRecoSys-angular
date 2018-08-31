@@ -1,6 +1,6 @@
 <div class="container">
   <div class="item-header">header</div> 
-  <div class="item-title"><h2>Recommendations</h2></div>
+  <div class="item-title"><h2>Add new Movies</h2></div>
   <div class="item-logo">
     <app-logo></app-logo>
   </div>
@@ -9,10 +9,8 @@
   </div>
   <div class="item-main">
 
-    <mat-card><h2>Watched movies</h2> <a [routerLink]="['/adding']" class="btn btn-link">Want add new movie?</a></mat-card>
-    <app-moviesreco [movies] = "movies"></app-moviesreco>
-    
-    
+    <app-adding-movie></app-adding-movie>
+
   </div>
   <div class="item-footer">footer</div>
 </div>

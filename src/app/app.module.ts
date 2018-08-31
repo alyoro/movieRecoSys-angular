@@ -27,6 +27,8 @@ import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { MoviesrecoComponent } from './moviesreco/moviesreco.component';
+import { AddingMovieComponent } from './adding-movie/adding-movie.component';
+import { AddingComponent } from './adding/adding.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { MoviesrecoComponent } from './moviesreco/moviesreco.component';
     RegisterComponent,
     AlertComponent,
     SearchFormComponent,
-    MoviesrecoComponent
+    MoviesrecoComponent,
+    AddingMovieComponent,
+    AddingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<mat-card>
+  <form [formGroup]="addingForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <input matInput color="primary" placeholder="Movie Title: " formControlName="formMovieTitle" type="text">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <input matInput color="primary" placeholder="Director: " formControlName="formMovieDirector" type="text">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-select placeholder="Year: " formControlName="formMovieYear">
+        <mat-option *ngFor="let year of arrayYear" [value]="year">{{year}}</mat-option>
+      </mat-select>
+      <!-- <input matInput color="primary" placeholder="Year: " formControlName="formMovieYear" type="text"> -->
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-select placeholder="Type: " formControlName="formMovieType">
+            <mat-option *ngFor="let type of arrayType" [value]="type">{{type}}</mat-option>
+          </mat-select>
+      <!-- <input matInput color="primary" placeholder="Type: " formControlName="formMovieType" type="text"> -->
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="secondary">Add Movie</button>
+  </form>
+</mat-card>
